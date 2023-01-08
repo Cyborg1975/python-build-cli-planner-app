@@ -13,9 +13,13 @@ def list_reminders():
                 print(e.ljust(32), end=' ')
         print()
 
-def add_reminder(text):
-    reminder = PoliteReminder(text)
+def add_reminder(text, date, ReminderClass):
+    reminder = ReminderClass(text, date)
+
+    if not isinstance(reminder, DeadlinedReminder):
+        raise TypeError('Invalid Reminder Class')
+
 
     with open('reminders.csv', 'a+', newline='\n') as file:
         writer = csv.writer(file)
-        writer.writerow([reminder.text])
+        writer.writerow(reminder)
