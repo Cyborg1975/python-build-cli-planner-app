@@ -8,5 +8,5 @@ class PrefixedReminder:
 
 
 class PoliteReminder(PrefixedReminder):
-
+    pass
     #def super()__init__(self, text):
