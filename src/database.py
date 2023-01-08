@@ -14,9 +14,9 @@ def list_reminders():
         print()
 
 def add_reminder(text, date, ReminderClass):
-    reminder = ReminderClass(text, date)
+    reminder = PoliteReminder(text, date)
 
-    if not isinstance(reminder, DeadlinedReminder):
+    if not isinstance(reminder, PoliteReminder):
         raise TypeError('Invalid Reminder Class')
 
 
