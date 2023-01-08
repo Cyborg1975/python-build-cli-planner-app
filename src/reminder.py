@@ -8,5 +8,6 @@ class PrefixedReminder:
 
 
 class PoliteReminder(PrefixedReminder):
-    pass
-    #def super()__init__(self, text):
+     def __init__(self, prefix="Hey, don't forget to "):
+        self.prefix = prefix
+        self.text = prefix + '<placeholder_text>'
