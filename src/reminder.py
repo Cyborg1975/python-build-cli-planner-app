@@ -8,4 +8,4 @@ class PrefixedReminder:
 
 
 class PoliteReminder(PrefixedReminder):
-    def super()__init__(self, text):
+    def super().__init__(self, text):
